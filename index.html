@@ -1,0 +1,529 @@
+<!DOCTYPE html>
+<html lang="ka">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="ეპს ქარხანა - მაღალი ხარისხის ექსპანდირებული პოლისტირენის პროდუქტები საქართველოში. იზოლაცია, შენობის მასალები და სპეციალური ეპს პროდუქტები."
+    />
+    <meta
+      name="keywords"
+      content="ეპს, ექსპანდირებული პოლისტირენი, იზოლაცია, შენობის მასალები, საქართველო, ქარხანა"
+    />
+    <meta name="author" content="EPS Factory Georgia" />
+    <meta
+      property="og:title"
+      content="ეპს ქარხანა - მაღალი ხარისხის ექსპანდირებული პოლისტირენი"
+    />
+    <meta
+      property="og:description"
+      content="საქართველოს წამყვანი ეპს პროდუქტების მწარმოებელი. მაღალი ხარისხის იზოლაციური მასალები და შენობის პროდუქტები."
+    />
+    <meta property="og:type" content="website" />
+
+    <title>
+      ეპს ქარხანა - მაღალი ხარისხის ექსპანდირებული პოლისტირენი | საქართველო
+    </title>
+    <link rel="stylesheet" href="./style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Noto+Sans+Georgian:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <!-- Header -->
+    <header class="header" id="header">
+      <nav class="nav container">
+        <div class="nav__brand">
+          <h2>ეპს ქარხანა</h2>
+        </div>
+        <div class="nav__menu" id="nav-menu">
+          <ul class="nav__list">
+            <li class="nav__item">
+              <a href="#home" class="nav__link active">მთავარი</a>
+            </li>
+            <li class="nav__item">
+              <a href="#benefits" class="nav__link">ეპს-ის უპირატესობები</a>
+            </li>
+            <li class="nav__item">
+              <a href="#why-us" class="nav__link">რატომ ჩვენ</a>
+            </li>
+            <li class="nav__item">
+              <a href="#products" class="nav__link">პროდუქტები</a>
+            </li>
+            <li class="nav__item">
+              <a href="#about" class="nav__link">ჩვენ შესახებ</a>
+            </li>
+            <li class="nav__item">
+              <a href="#contact" class="nav__link">კონტაქტი</a>
+            </li>
+          </ul>
+        </div>
+        <div class="nav__actions">
+          <div class="cart-icon" id="cart-icon">
+            <svg
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M3 3H5L5.4 5M7 13H17L21 5H5.4M7 13L5.4 5M7 13L4.7 15.3C4.3 15.7 4.6 16.5 5.1 16.5H17M17 13V17C17 18.1 16.1 19 15 19H9C7.9 19 7 18.1 7 17V13M9 21C9.6 21 10 21.4 10 22S9.6 23 9 23 8 22.6 8 22 8.4 21 9 21ZM20 21C20.6 21 21 21.4 21 22S20.6 23 20 23 19 22.6 19 22 19.4 21 20 21Z"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+            </svg>
+            <span class="cart-count" id="cart-count">0</span>
+          </div>
+          <div class="nav__toggle" id="nav-toggle">
+            <span></span>
+            <span></span>
+            <span></span>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <!-- Cart Sidebar -->
+    <div class="cart-sidebar" id="cart-sidebar">
+      <div class="cart-header">
+        <h3>კალათა</h3>
+        <button class="cart-close" id="cart-close">&times;</button>
+      </div>
+      <div class="cart-items" id="cart-items">
+        <p class="empty-cart">კალათა ცარიელია</p>
+      </div>
+      <div class="cart-footer">
+        <div class="cart-total">
+          <strong>სულ: <span id="cart-total">0</span> ლარი</strong>
+        </div>
+        <button class="checkout-btn" id="checkout-btn">
+          შეკვეთის გაფორმება
+        </button>
+      </div>
+    </div>
+
+    <!-- Main Content -->
+    <main>
+      <!-- Hero Section -->
+      <section class="hero" id="home">
+        <div class="hero__container container">
+          <div class="hero__content">
+            <h1 class="hero__title">
+              საქართველოს წამყვანი <span class="highlight">ეპს ქარხანა</span>
+            </h1>
+            <p class="hero__description">
+              ჩვენ ვაწარმოებთ მაღალი ხარისხის ექსპანდირებული პოლისტირენის
+              პროდუქტებს, რომლებიც შეესაბამება ევროპულ სტანდარტებს და
+              უზრუნველყოფს შენობების ეფექტურ თერმოიზოლაციას.
+            </p>
+            <div class="hero__buttons">
+              <a href="#products" class="btn btn--primary">პროდუქტების ნახვა</a>
+              <a href="#contact" class="btn btn--secondary">კონტაქტი</a>
+            </div>
+          </div>
+          <div class="hero__image">
+            <div class="hero__image-placeholder">
+              <svg
+                width="400"
+                height="300"
+                viewBox="0 0 400 300"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <rect width="400" height="300" fill="#f0f9ff" />
+                <rect
+                  x="50"
+                  y="50"
+                  width="300"
+                  height="200"
+                  fill="#0ea5e9"
+                  opacity="0.1"
+                />
+                <text
+                  x="200"
+                  y="160"
+                  text-anchor="middle"
+                  fill="#0ea5e9"
+                  font-size="16"
+                >
+                  ეპს პროდუქტები
+                </text>
+              </svg>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Benefits Section -->
+      <section class="benefits" id="benefits">
+        <div class="container">
+          <div class="section-header">
+            <h2 class="section-title">რატომ არის ეპს საუკეთესო არჩევანი?</h2>
+            <p class="section-subtitle">
+              ექსპანდირებული პოლისტირენის უნიკალური თვისებები
+            </p>
+          </div>
+          <div class="benefits__grid">
+            <div class="benefit-card">
+              <div class="benefit-icon">🏠</div>
+              <h3>შესანიშნავი იზოლაცია</h3>
+              <p>
+                ეპს უზრუნველყოფს შენობის ეფექტურ თერმოიზოლაციას და ენერგიის
+                დაზოგვას
+              </p>
+            </div>
+            <div class="benefit-card">
+              <div class="benefit-icon">💧</div>
+              <h3>წყალგაუმტარობა</h3>
+              <p>
+                მასალა არ შეიწოვს წყალს და ინარჩუნებს თავის თვისებებს ნებისმიერ
+                პირობებში
+              </p>
+            </div>
+            <div class="benefit-card">
+              <div class="benefit-icon">🪶</div>
+              <h3>მსუბუქი წონა</h3>
+              <p>მცირე წონის გამო ადვილია ტრანსპორტირება და მონტაჟი</p>
+            </div>
+            <div class="benefit-card">
+              <div class="benefit-icon">🛡️</div>
+              <h3>გამძლეობა</h3>
+              <p>მაღალი მექანიკური სიმტკიცე და ხანგრძლივი სამსახურის ვადა</p>
+            </div>
+            <div class="benefit-card">
+              <div class="benefit-icon">🌱</div>
+              <h3>ეკოლოგიურად უსაფრთხო</h3>
+              <p>მასალა არ შეიცავს მავნე ნივთიერებებს და რეციკლირდება</p>
+            </div>
+            <div class="benefit-card">
+              <div class="benefit-icon">🔥</div>
+              <h3>ცეცხლგამძლეობა</h3>
+              <p>
+                თვითგამქრობადი მასალა, რომელიც შეესაბამება უსაფრთხოების
+                სტანდარტებს
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Why Us Section -->
+      <section class="why-us" id="why-us">
+        <div class="container">
+          <div class="section-header">
+            <h2 class="section-title">რატომ უნდა აირჩიოთ ჩვენ?</h2>
+            <p class="section-subtitle">ჩვენი კონკურენტული უპირატესობები</p>
+          </div>
+          <div class="why-us__content">
+            <div class="why-us__features">
+              <div class="feature-item">
+                <div class="feature-number">01</div>
+                <div class="feature-content">
+                  <h3>20+ წლის გამოცდილება</h3>
+                  <p>
+                    ჩვენ ვმუშაობთ ეპს ინდუსტრიაში უკვე 20 წელზე მეტია და გვაქვს
+                    ღრმა ცოდნა ამ სფეროში
+                  </p>
+                </div>
+              </div>
+              <div class="feature-item">
+                <div class="feature-number">02</div>
+                <div class="feature-content">
+                  <h3>ევროპული ხარისხი</h3>
+                  <p>
+                    ჩვენი პროდუქტები აკმაყოფილებს ევროპულ სტანდარტებს და გაივლის
+                    მკაცრ ხარისხის კონტროლს
+                  </p>
+                </div>
+              </div>
+              <div class="feature-item">
+                <div class="feature-number">03</div>
+                <div class="feature-content">
+                  <h3>სწრაფი მიწოდება</h3>
+                  <p>
+                    ჩვენ გვაქვს საკუთარი ლოგისტიკა და უზრუნველვყოფთ სწრაფ
+                    მიწოდებას მთელი საქართველოს მასშტაბით
+                  </p>
+                </div>
+              </div>
+              <div class="feature-item">
+                <div class="feature-number">04</div>
+                <div class="feature-content">
+                  <h3>კონკურენტული ფასები</h3>
+                  <p>
+                    პირდაპირ მწარმოებლისგან შეძენით უმაღლესი ხარისხის პროდუქტებს
+                    საუკეთესო ფასებში
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Products Section -->
+      <section class="products" id="products">
+        <div class="container">
+          <div class="section-header">
+            <h2 class="section-title">ჩვენი პროდუქტები</h2>
+            <p class="section-subtitle">
+              ფართო ასორტიმენტი ყველა საჭიროებისთვის
+            </p>
+          </div>
+
+          <!-- Filters and Search -->
+          <div class="products__controls">
+            <div class="search-box">
+              <input
+                type="text"
+                id="product-search"
+                placeholder="მოძებნეთ პროდუქტი..."
+              />
+              <svg
+                class="search-icon"
+                width="20"
+                height="20"
+                viewBox="0 0 24 24"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <circle
+                  cx="11"
+                  cy="11"
+                  r="8"
+                  stroke="currentColor"
+                  stroke-width="2"
+                />
+                <path
+                  d="m21 21-4.35-4.35"
+                  stroke="currentColor"
+                  stroke-width="2"
+                />
+              </svg>
+            </div>
+            <div class="filters">
+              <select id="category-filter">
+                <option value="">ყველა კატეგორია</option>
+                <option value="insulation">იზოლაცია</option>
+                <option value="packaging">შეფუთვა</option>
+                <option value="construction">მშენებლობა</option>
+              </select>
+              <select id="price-filter">
+                <option value="">ყველა ფასი</option>
+                <option value="0-50">0-50 ლარი</option>
+                <option value="50-100">50-100 ლარი</option>
+                <option value="100+">100+ ლარი</option>
+              </select>
+            </div>
+          </div>
+
+          <!-- Products Grid -->
+          <div class="products__grid" id="products-grid">
+            <!-- Products will be loaded dynamically -->
+          </div>
+        </div>
+      </section>
+
+      <!-- About Section -->
+      <section class="about" id="about">
+        <div class="container">
+          <div class="about__content">
+            <div class="about__text">
+              <h2>ჩვენ შესახებ</h2>
+              <p>
+                ეპს ქარხანა არის საქართველოს წამყვანი ექსპანდირებული
+                პოლისტირენის მწარმოებელი კომპანია. ჩვენ დავარსდით 2003 წელს და
+                დღემდე ვართ ლიდერები ამ სფეროში.
+              </p>
+              <p>
+                ჩვენი მისიაა მივაწოდოთ ქართულ ბაზარს მაღალი ხარისხის,
+                ეკოლოგიურად უსაფრთხო და ენერგოეფექტური იზოლაციური მასალები,
+                რომლებიც ხელს უწყობს თანამედროვე, ენერგოეფექტური შენობების
+                მშენებლობას.
+              </p>
+              <div class="about__stats">
+                <div class="stat-item">
+                  <h3>20+</h3>
+                  <p>წლის გამოცდილება</p>
+                </div>
+                <div class="stat-item">
+                  <h3>1000+</h3>
+                  <p>კმაყოფილი კლიენტი</p>
+                </div>
+                <div class="stat-item">
+                  <h3>50+</h3>
+                  <p>პროდუქტის ნაირსახეობა</p>
+                </div>
+              </div>
+            </div>
+            <div class="about__image">
+              <div class="about__image-placeholder">
+                <svg
+                  width="500"
+                  height="400"
+                  viewBox="0 0 500 400"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <rect width="500" height="400" fill="#f8fafc" />
+                  <rect
+                    x="50"
+                    y="50"
+                    width="400"
+                    height="300"
+                    fill="#0ea5e9"
+                    opacity="0.1"
+                  />
+                  <text
+                    x="250"
+                    y="210"
+                    text-anchor="middle"
+                    fill="#0ea5e9"
+                    font-size="18"
+                  >
+                    ქარხნის ფოტო
+                  </text>
+                </svg>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Contact Section -->
+      <section class="contact" id="contact">
+        <div class="container">
+          <div class="section-header">
+            <h2 class="section-title">დაგვიკავშირდით</h2>
+            <p class="section-subtitle">
+              ჩვენ მზად ვართ თქვენს შეკითხვებზე პასუხის გასაცემად
+            </p>
+          </div>
+          <div class="contact__content">
+            <div class="contact__info">
+              <div class="contact-item">
+                <div class="contact-icon">📍</div>
+                <div>
+                  <h4>მისამართი</h4>
+                  <p>თბილისი, საქართველო<br />ინდუსტრიული ზონა #1</p>
+                </div>
+              </div>
+              <div class="contact-item">
+                <div class="contact-icon">📞</div>
+                <div>
+                  <h4>ტელეფონი</h4>
+                  <p>+995 32 2 XX XX XX<br />+995 599 XX XX XX</p>
+                </div>
+              </div>
+              <div class="contact-item">
+                <div class="contact-icon">✉️</div>
+                <div>
+                  <h4>ელ. ფოსტა</h4>
+                  <p>
+                    <a
+                      href="/cdn-cgi/l/email-protection"
+                      class="__cf_email__"
+                      data-cfemail="81e8efe7eec1e4f1f2e7e0e2f5eef3f8afe6e4"
+                      >[email&#160;protected]</a
+                    ><br /><a
+                      href="/cdn-cgi/l/email-protection"
+                      class="__cf_email__"
+                      data-cfemail="e89b89848d9ba88d989b8e898b9c879a91c68f8d"
+                      >[email&#160;protected]</a
+                    >
+                  </p>
+                </div>
+              </div>
+              <div class="contact-item">
+                <div class="contact-icon">🕒</div>
+                <div>
+                  <h4>სამუშაო საათები</h4>
+                  <p>
+                    ორშაბათი - პარასკევი: 9:00-18:00<br />შაბათი: 10:00-15:00
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="contact__map">
+              <div id="map" class="map-container">
+                <iframe
+                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2977.0!2d44.7830!3d41.7151!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zNDHCsDQyJzU0LjQiTiA0NMKwNDYnNTguOCJF!5e0!3m2!1sen!2sge!4v1620000000000!5m2!1sen!2sge"
+                  width="100%"
+                  height="400"
+                  style="border: 0"
+                  allowfullscreen=""
+                  loading="lazy"
+                  referrerpolicy="no-referrer-when-downgrade"
+                >
+                </iframe>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+      <div class="container">
+        <div class="footer__content">
+          <div class="footer__brand">
+            <h3>ეპს ქარხანა</h3>
+            <p>საქართველოს წამყვანი ექსპანდირებული პოლისტირენის მწარმოებელი</p>
+          </div>
+          <div class="footer__links">
+            <h4>სწრაფი ლინკები</h4>
+            <ul>
+              <li><a href="#home">მთავარი</a></li>
+              <li><a href="#products">პროდუქტები</a></li>
+              <li><a href="#about">ჩვენ შესახებ</a></li>
+              <li><a href="#contact">კონტაქტი</a></li>
+            </ul>
+          </div>
+          <div class="footer__contact">
+            <h4>კონტაქტი</h4>
+            <p>📞 +995 32 2 XX XX XX</p>
+            <p>
+              ✉️
+              <a
+                href="/cdn-cgi/l/email-protection"
+                class="__cf_email__"
+                data-cfemail="7a13141c153a1f0a091c1b190e150803541d1f"
+                >[email&#160;protected]</a
+              >
+            </p>
+            <p>📍 თბილისი, საქართველო</p>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <footer
+          style="
+            text-align: center;
+            padding: 20px;
+            background-color: #111;
+            color: #fff;
+            font-size: 14px;
+            ;
+          "
+        >
+           გაკეთბულია <a style="color: green;" target="_blank" href="https://n1k0devv.github.io/N1kodevv/">N1kodevv</a>-ის მიერ ©  2025 All Rights Reserved
+        </footer>
+
+    <!-- Scripts -->
+    <script
+      data-cfasync="false"
+      src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"
+    ></script>
+    <script src="./products.js"></script>
+    <script src="./georgian-content.js"></script>
+    <script src="./script.js"></script>
+  </body>
+</html>
