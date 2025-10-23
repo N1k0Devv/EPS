@@ -1,292 +1,266 @@
 <!DOCTYPE html>
 <html lang="ka">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>შეკვეთის გაფორმება - ეპს ქარხანა</title>
-    <link rel="stylesheet" href="./style.css">
-    <link rel="stylesheet" href="./checkout.css">
-</head>
-<body>
-    <!-- Header -->
-    <header class="header">
-        <nav class="nav container">
-            <div class="nav__brand">
-                <h2>🏗️ ეპს ქარხანა</h2>
-            </div>
-            <div class="nav__menu" id="nav-menu">
-                <ul class="nav__list">
-                    <li><a href="index.html" class="nav__link">მთავარი</a></li>
-                    <li><a href="index.html#products" class="nav__link">პროდუქტები</a></li>
-                    <li><a href="index.html#about" class="nav__link">ჩვენ შესახებ</a></li>
-                    <li><a href="index.html#contact" class="nav__link">კონტაქტი</a></li>
-                </ul>
-            </div>
-            <div class="nav__actions">
-                <div class="cart-icon" id="cart-icon">
-                    🛒
-                    <span class="cart-count" id="cart-count">0</span>
-                </div>
-                <div class="nav__toggle" id="nav-toggle">
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                </div>
-            </div>
-        </nav>
-    </header>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>გადახდა - EPS ქარხანა</title>
+    <link rel="stylesheet" href="./style.css" />
+  </head>
 
-    <!-- Checkout Main Content -->
-    <main class="checkout-main">
-        <div class="container">
-            <div class="checkout-header">
-                <h1>შეკვეთის გაფორმება</h1>
-                <div class="checkout-steps">
-                    <div class="step active" data-step="1">
-                        <span class="step-number">1</span>
-                        <span class="step-title">კალათა</span>
-                    </div>
-                    <div class="step active" data-step="2">
-                        <span class="step-number">2</span>
-                        <span class="step-title">ინფორმაცია</span>
-                    </div>
-                    <div class="step" data-step="3">
-                        <span class="step-number">3</span>
-                        <span class="step-title">გადახდა</span>
-                    </div>
-                    <div class="step" data-step="4">
-                        <span class="step-number">4</span>
-                        <span class="step-title">დასტური</span>
-                    </div>
-                </div>
-            </div>
-
-            <div class="checkout-content">
-                <div class="checkout-form-section">
-                    <!-- Customer Information Form -->
-                    <div class="checkout-section" id="customer-info-section">
-                        <h2>🏢 მომხმარებლის ინფორმაცია</h2>
-                        <form id="checkout-form" class="checkout-form">
-                            <div class="form-group">
-                                <label for="customer-type">მომხმარებლის ტიპი</label>
-                                <select id="customer-type" name="customerType" required>
-                                    <option value="">აირჩიეთ ტიპი</option>
-                                    <option value="individual">ფიზიკური პირი</option>
-                                    <option value="business">იურიდიული პირი</option>
-                                </select>
-                            </div>
-
-                            <div class="form-row">
-                                <div class="form-group">
-                                    <label for="first-name">სახელი *</label>
-                                    <input type="text" id="first-name" name="firstName" required>
-                                </div>
-                                <div class="form-group">
-                                    <label for="last-name">გვარი *</label>
-                                    <input type="text" id="last-name" name="lastName" required>
-                                </div>
-                            </div>
-
-                            <div class="business-fields" style="display: none;">
-                                <div class="form-group">
-                                    <label for="company-name">კომპანიის დასახელება</label>
-                                    <input type="text" id="company-name" name="companyName">
-                                </div>
-                                <div class="form-group">
-                                    <label for="tax-number">საიდენტიფიკაციო ნომერი</label>
-                                    <input type="text" id="tax-number" name="taxNumber">
-                                </div>
-                            </div>
-
-                            <div class="form-row">
-                                <div class="form-group">
-                                    <label for="email">ელ. ფოსტა *</label>
-                                    <input type="email" id="email" name="email" required>
-                                </div>
-                                <div class="form-group">
-                                    <label for="phone">ტელეფონი *</label>
-                                    <input type="tel" id="phone" name="phone" required placeholder="+995 XXX XXX XXX">
-                                </div>
-                            </div>
-
-                            <h3>📍 მიწოდების მისამართი</h3>
-                            <div class="form-group">
-                                <label for="city">ქალაქი *</label>
-                                <select id="city" name="city" required>
-                                    <option value="">აირჩიეთ ქალაქი</option>
-                                    <option value="tbilisi">თბილისი</option>
-                                    <option value="batumi">ბათუმი</option>
-                                    <option value="kutaisi">ქუთაისი</option>
-                                    <option value="rustavi">რუსთავი</option>
-                                    <option value="gori">გორი</option>
-                                    <option value="zugdidi">ზუგდიდი</option>
-                                    <option value="poti">ფოთი</option>
-                                    <option value="other">სხვა</option>
-                                </select>
-                            </div>
-
-                            <div class="form-group">
-                                <label for="address">მისამართი *</label>
-                                <textarea id="address" name="address" required placeholder="ქუჩა, სახლის ნომერი, ბინის ნომერი"></textarea>
-                            </div>
-
-                            <div class="form-group">
-                                <label for="delivery-notes">მიწოდების შენიშვნები</label>
-                                <textarea id="delivery-notes" name="deliveryNotes" placeholder="დამატებითი ინფორმაცია მიწოდების შესახებ"></textarea>
-                            </div>
-
-                            <h3>🚚 მიწოდების ტიპი</h3>
-                            <div class="delivery-options">
-                                <label class="delivery-option">
-                                    <input type="radio" name="deliveryType" value="standard" checked>
-                                    <div class="delivery-option-content">
-                                        <span class="delivery-title">სტანდარტული მიწოდება</span>
-                                        <span class="delivery-time">3-5 სამუშაო დღე</span>
-                                        <span class="delivery-price">უფასო (50 ლარზე მეტი შეკვეთისთვის)</span>
-                                    </div>
-                                </label>
-                                <label class="delivery-option">
-                                    <input type="radio" name="deliveryType" value="express">
-                                    <div class="delivery-option-content">
-                                        <span class="delivery-title">ექსპრეს მიწოდება</span>
-                                        <span class="delivery-time">1-2 სამუშაო დღე</span>
-                                        <span class="delivery-price">15 ლარი</span>
-                                    </div>
-                                </label>
-                                <label class="delivery-option">
-                                    <input type="radio" name="deliveryType" value="pickup">
-                                    <div class="delivery-option-content">
-                                        <span class="delivery-title">თვითონ ამოღება</span>
-                                        <span class="delivery-time">ნებისმიერ დროს</span>
-                                        <span class="delivery-price">უფასო</span>
-                                    </div>
-                                </label>
-                            </div>
-
-                            <h3>💳 გადახდის მეთოდი</h3>
-                            <div class="payment-methods">
-                                <label class="payment-method">
-                                    <input type="radio" name="paymentMethod" value="cash" checked>
-                                    <div class="payment-method-content">
-                                        <span class="payment-icon">💵</span>
-                                        <span class="payment-title">ნაღდი ანგარიშსწორება</span>
-                                        <span class="payment-desc">მიწოდებისას</span>
-                                    </div>
-                                </label>
-                                <label class="payment-method">
-                                    <input type="radio" name="paymentMethod" value="bank">
-                                    <div class="payment-method-content">
-                                        <span class="payment-icon">🏦</span>
-                                        <span class="payment-title">საბანკო გადარიცხვა</span>
-                                        <span class="payment-desc">ინვოისის მიღების შემდეგ</span>
-                                    </div>
-                                </label>
-                                <label class="payment-method">
-                                    <input type="radio" name="paymentMethod" value="card">
-                                    <div class="payment-method-content">
-                                        <span class="payment-icon">💳</span>
-                                        <span class="payment-title">ბარათით გადახდა</span>
-                                        <span class="payment-desc">ონლაინ გადახდა</span>
-                                    </div>
-                                </label>
-                            </div>
-
-                            <div class="form-actions">
-                                <button type="button" class="btn btn--secondary" onclick="window.history.back()">
-                                    ← უკან დაბრუნება
-                                </button>
-                                <button type="submit" class="btn btn--primary" id="place-order-btn">
-                                    შეკვეთის გაფორმება
-                                </button>
-                            </div>
-                        </form>
-                    </div>
-                </div>
-
-                <!-- Order Summary -->
-                <div class="order-summary-section">
-                    <div class="order-summary">
-                        <h2>🛒 შეკვეთის შეჯამება</h2>
-                        <div class="order-items" id="checkout-items">
-                            <!-- Items will be loaded here -->
-                        </div>
-                        
-                        <div class="order-totals">
-                            <div class="total-row">
-                                <span>პროდუქტების ღირებულება:</span>
-                                <span id="subtotal">0.00 ლარი</span>
-                            </div>
-                            <div class="total-row">
-                                <span>მიწოდება:</span>
-                                <span id="delivery-cost">0.00 ლარი</span>
-                            </div>
-                            <div class="total-row discount-row" id="discount-row" style="display: none;">
-                                <span>ფასდაკლება:</span>
-                                <span id="discount-amount">-0.00 ლარი</span>
-                            </div>
-                            <div class="total-row final-total">
-                                <span>სულ გადასახდელი:</span>
-                                <span id="final-total">0.00 ლარი</span>
-                            </div>
-                        </div>
-
-                        <div class="promo-code-section">
-                            <h4>🎟️ პრომო კოდი</h4>
-                            <div class="promo-code-input">
-                                <input type="text" id="promo-code" placeholder="შეიყვანეთ პრომო კოდი">
-                                <button type="button" id="apply-promo" class="btn btn--secondary">გამოყენება</button>
-                            </div>
-                            <div class="promo-message" id="promo-message"></div>
-                        </div>
-
-                        <div class="trust-badges">
-                            <div class="trust-badge">
-                                <span class="badge-icon">🔒</span>
-                                <span class="badge-text">უსაფრთხო გადახდა</span>
-                            </div>
-                            <div class="trust-badge">
-                                <span class="badge-icon">🚚</span>
-                                <span class="badge-text">სწრაფი მიწოდება</span>
-                            </div>
-                            <div class="trust-badge">
-                                <span class="badge-icon">📞</span>
-                                <span class="badge-text">24/7 მხარდაჭერა</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
+  <body>
+    <!-- Navigation -->
+    <nav class="navbar">
+      <div class="nav-container">
+        <div class="nav-logo">
+          <h2>EPS ქარხანა</h2>
         </div>
-    </main>
 
-    <!-- Order Confirmation Modal -->
-    <div class="order-confirmation-modal" id="order-confirmation-modal" style="display: none;">
-        <div class="modal-content">
-            <div class="confirmation-header">
-                <div class="success-icon">✅</div>
-                <h2>შეკვეთა წარმატებით გაიგზავნა!</h2>
-            </div>
-            <div class="confirmation-body">
-                <p>თქვენი შეკვეთის ნომერია: <strong id="order-number"></strong></p>
-                <p>ჩვენ დაგიკავშირდებით <span id="contact-time">24 საათში</span> შეკვეთის დასადასტურებლად.</p>
-                <div class="order-details" id="confirmation-details">
-                    <!-- Order details will be shown here -->
-                </div>
-            </div>
-            <div class="confirmation-actions">
-                <button class="btn btn--primary" onclick="window.location.href='index.html'">
-                    მთავარ გვერდზე დაბრუნება
-                </button>
-                <button class="btn btn--secondary" onclick="window.print()">
-                    შეკვეთის ამობეჭდვა
-                </button>
-            </div>
+        <ul class="nav-menu">
+          <li><a href="index.html" class="nav-link active">მთავარი</a></li>
+          <li><a href="products.html" class="nav-link">პროდუქტები</a></li>
+          <li><a href="about.html" class="nav-link">ჩვენს შესახებ</a></li>
+          <li><a href="why-us.html" class="nav-link">რატომ ჩვენ</a></li>
+          <li>
+            <a
+              href="#"
+              class="cart-icon"
+              data-tooltip="კალათის ნახვა"
+              onclick="toggleCart()"
+            >
+              🛒 <span id="cart-count">0</span>
+            </a>
+          </li>
+        </ul>
+
+        <div class="hamburger" onclick="toggleMobileMenu()">
+          <div class="bar"></div>
+          <div class="bar"></div>
+          <div class="bar"></div>
         </div>
+      </div>
+    </nav>
+
+    <!-- Mobile Overlay -->
+    <div class="mobile-overlay">
+      <div class="mobile-menu-content">
+        <ul>
+          <li><a href="index.html">მთავარი</a></li>
+          <li><a href="products.html">პროდუქტები</a></li>
+          <li><a href="about.html">ჩვენს შესახებ</a></li>
+          <li><a href="why-us.html">რატომ ჩვენ</a></li>
+          <li><a href="contact.html">კონტაქტი</a></li>
+          <li>
+            <a
+              href="#"
+              class="cart-icon"
+              data-tooltip="კალათის ნახვა"
+              onclick="toggleCart()"
+            >
+              🛒 <span id="cart-count">0</span>
+            </a>
+          </li>
+        </ul>
+      </div>
     </div>
+    <!-- Checkout Section -->
+    <section class="checkout-section">
+      <div class="container">
+        <h1 class="section-title">შეკვეთის გაფორმება</h1>
 
-    <!-- Scripts -->
-    <script src="./products.js"></script>
-    <script src="./georgian-content.js"></script>
-    <script src="./checkout.js"></script>
-</body>
+        <div
+          style="
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 2rem;
+            align-items: start;
+          "
+        >
+          <!-- Order Summary -->
+          <div>
+            <h2>შეკვეთის დეტალები</h2>
+            <div class="order-summary">
+              <h3>შეკვეთილი პროდუქტები:</h3>
+              <div id="checkout-items">
+                <!-- Items will be populated by JavaScript -->
+              </div>
+              <div class="order-item">
+                <strong>სულ: ₾<span id="checkout-total">0.00</span></strong>
+              </div>
+            </div>
+          </div>
+
+          <!-- Checkout Form -->
+          <div>
+            <form class="checkout-form" onsubmit="handleCheckout(event)">
+              <h2>მიწოდების ინფორმაცია</h2>
+
+              <div class="form-group">
+                <label for="name">სახელი და გვარი *</label>
+                <input type="text" id="name" name="name" required />
+              </div>
+
+              <div class="form-group">
+                <label for="email">ელ-ფოსტა *</label>
+                <input type="email" id="email" name="email" required />
+              </div>
+
+              <div class="form-group">
+                <label for="phone">ტელეფონი *</label>
+                <input type="tel" id="phone" name="phone" required />
+              </div>
+
+              <div class="form-group">
+                <label for="address">მისამართი *</label>
+                <textarea
+                  id="address"
+                  name="address"
+                  rows="3"
+                  required
+                  placeholder="ქალაქი, ქუჩა, სახლის ნომერი"
+                ></textarea>
+              </div>
+
+              <div class="form-group">
+                <label for="city">ქალაქი *</label>
+                <select id="city" name="city" required>
+                  <option value="">აირჩიეთ ქალაქი</option>
+                  <option value="tbilisi">თბილისი</option>
+                  <option value="batumi">ბათუმი</option>
+                  <option value="kutaisi">ქუთაისი</option>
+                  <option value="rustavi">რუსთავი</option>
+                  <option value="gori">გორი</option>
+                  <option value="zugdidi">ზუგდიდი</option>
+                  <option value="poti">ფოთი</option>
+                  <option value="other">სხვა</option>
+                </select>
+              </div>
+
+              <div class="form-group">
+                <label for="delivery">მიწოდების ტიპი *</label>
+                <select id="delivery" name="delivery" required>
+                  <option value="">აირჩიეთ მიწოდების ტიპი</option>
+                  <option value="standard">
+                    სტანდარტული მიწოდება (2-3 დღე) - უფასო
+                  </option>
+                  <option value="express">
+                    ექსპრეს მიწოდება (1 დღე) - ₾20
+                  </option>
+                  <option value="pickup">ქარხნიდან აღება - უფასო</option>
+                </select>
+              </div>
+
+              <div class="form-group">
+                <label for="payment">გადახდის მეთოდი *</label>
+                <select id="payment" name="payment" required>
+                  <option value="">აირჩიეთ გადახდის მეთოდი</option>
+                  <option value="cash">ნაღდი ფული მიწოდებისას</option>
+                  <option value="bank">საბანკო გადარიცხვა</option>
+                  <option value="card">ბარათით ონლაინ</option>
+                </select>
+              </div>
+
+              <div class="form-group">
+                <label for="notes">დამატებითი შენიშვნები</label>
+                <textarea
+                  id="notes"
+                  name="notes"
+                  rows="3"
+                  placeholder="თუ გაქვთ რაიმე სპეციალური მოთხოვნები..."
+                ></textarea>
+              </div>
+
+              <div class="form-group">
+                <label>
+                  <input type="checkbox" required />
+                  ვეთანხმები
+                  <a href="#" style="color: #3498db">წესებსა და პირობებს</a>
+                </label>
+              </div>
+
+              <button type="submit" class="btn btn-primary btn-full">
+                შეკვეთის დადასტურება
+              </button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+
+    <footer
+      style="
+        text-align: center;
+        padding: 20px;
+        background-color: #111;
+        color: #fff;
+        font-size: 14px;
+      "
+    >
+      გაკეთბულია
+      <a
+        style="color: green"
+        target="_blank"
+        href="https://n1k0devv.github.io/N1kodevv/"
+        >N1kodevv</a
+      >-ის მიერ © 2025 All Rights Reserved
+    </footer>
+
+    <script src="./script.js"></script>
+    <script>
+      // Display checkout items on page load
+      document.addEventListener("DOMContentLoaded", function () {
+        displayCheckoutItems();
+      });
+
+      function displayCheckoutItems() {
+        const checkoutItems = document.getElementById("checkout-items");
+        const checkoutTotal = document.getElementById("checkout-total");
+
+        if (cart.length === 0) {
+          checkoutItems.innerHTML = "<p>კალათა ცარიელია</p>";
+          checkoutTotal.textContent = "0.00";
+          return;
+        }
+
+        let total = 0;
+        let itemsHTML = "";
+
+        cart.forEach((item) => {
+          const itemTotal = item.price * item.quantity;
+          total += itemTotal;
+
+          itemsHTML += `
+                    <div class="order-item">
+                        <span>${item.name} x ${item.quantity}</span>
+                        <span>₾${itemTotal.toFixed(2)}</span>
+                    </div>
+                `;
+        });
+
+        checkoutItems.innerHTML = itemsHTML;
+        checkoutTotal.textContent = total.toFixed(2);
+      }
+
+      // Update delivery cost based on selection
+      document
+        .getElementById("delivery")
+        .addEventListener("change", function () {
+          const deliveryType = this.value;
+          const total = cart.reduce(
+            (sum, item) => sum + item.price * item.quantity,
+            0
+          );
+          let deliveryCost = 0;
+
+          if (deliveryType === "express") {
+            deliveryCost = 20;
+          }
+
+          const finalTotal = total + deliveryCost;
+          document.getElementById("checkout-total").textContent =
+            finalTotal.toFixed(2);
+        });
+    </script>
+  </body>
 </html>

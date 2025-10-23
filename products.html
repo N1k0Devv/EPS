@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="ka">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>პროდუქტები - EPS ქარხანა</title>
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+
+  <body>
+    <!-- Navigation -->
+    <nav class="navbar">
+      <div class="nav-container">
+        <div class="nav-logo">
+          <h2>EPS ქარხანა</h2>
+        </div>
+
+        <ul class="nav-menu">
+          <li><a href="index.html" class="nav-link active">მთავარი</a></li>
+          <li><a href="products.html" class="nav-link">პროდუქტები</a></li>
+          <li><a href="about.html" class="nav-link">ჩვენს შესახებ</a></li>
+          <li><a href="why-us.html" class="nav-link">რატომ ჩვენ</a></li>
+          <li>
+            <a
+              href="#"
+              class="cart-icon"
+              data-tooltip="კალათის ნახვა"
+              onclick="toggleCart()"
+            >
+              🛒 <span id="cart-count">0</span>
+            </a>
+          </li>
+        </ul>
+
+        <div class="hamburger" onclick="toggleMobileMenu()">
+          <div class="bar"></div>
+          <div class="bar"></div>
+          <div class="bar"></div>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Mobile Overlay -->
+    <div class="mobile-overlay">
+      <div class="mobile-menu-content">
+        <ul>
+          <li><a href="index.html">მთავარი</a></li>
+          <li><a href="products.html">პროდუქტები</a></li>
+          <li><a href="about.html">ჩვენს შესახებ</a></li>
+          <li><a href="why-us.html">რატომ ჩვენ</a></li>
+          <li><a href="contact.html">კონტაქტი</a></li>
+          <li>
+            <a
+              href="#"
+              class="cart-icon"
+              data-tooltip="კალათის ნახვა"
+              onclick="toggleCart()"
+            >
+              🛒 <span id="cart-count">0</span>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- Products Section -->
+    <section class="products-section">
+      <div class="container">
+        <h1 class="section-title">ჩვენი პროდუქტები</h1>
+
+        <!-- Product Filters -->
+        <div class="product-filters">
+          <button class="filter-btn active" onclick="filterProducts('all')">
+            ყველა
+          </button>
+          <button class="filter-btn" onclick="filterProducts('blocks')">
+            ბლოკები
+          </button>
+          <button class="filter-btn" onclick="filterProducts('panels')">
+            პანელები
+          </button>
+          <button class="filter-btn" onclick="filterProducts('packaging')">
+            შეფუთვა
+          </button>
+          <button class="filter-btn" onclick="filterProducts('insulation')">
+            იზოლაცია
+          </button>
+        </div>
+
+        <!-- Products Grid -->
+        <div class="products-grid">
+          <!-- EPS Blocks -->
+          <div class="product-card" data-category="blocks">
+            <div class="product-image eps-block"></div>
+            <h3>EPS სამშენებლო ბლოკი 50x30x20</h3>
+            <p>მაღალი ხარისხის EPS ბლოკი სამშენებლო სამუშაოებისთვის</p>
+            <div class="product-price">₾25.00</div>
+            <button
+              class="add-to-cart"
+              onclick="addToCart('eps-block-1', 'EPS სამშენებლო ბლოკი 50x30x20', 25.00)"
+            >
+              კალათაში დამატება
+            </button>
+          </div>
+
+          <div class="product-card" data-category="blocks">
+            <div class="product-image eps-block"></div>
+            <h3>EPS სამშენებლო ბლოკი 40x25x15</h3>
+            <p>კომპაქტური ზომის EPS ბლოკი მცირე სამუშაოებისთვის</p>
+            <div class="product-price">₾18.00</div>
+            <button
+              class="add-to-cart"
+              onclick="addToCart('eps-block-2', 'EPS სამშენებლო ბლოკი 40x25x15', 18.00)"
+            >
+              კალათაში დამატება
+            </button>
+          </div>
+
+          <!-- EPS Panels -->
+          <div class="product-card" data-category="panels">
+            <div class="product-image eps-panel"></div>
+            <h3>EPS იზოლაციური პანელი 100x50x5</h3>
+            <p>თერმული იზოლაციისთვის განკუთვნილი EPS პანელი</p>
+            <div class="product-price">₾35.00</div>
+            <button
+              class="add-to-cart"
+              onclick="addToCart('eps-panel-1', 'EPS იზოლაციური პანელი 100x50x5', 35.00)"
+            >
+              კალათაში დამატება
+            </button>
+          </div>
+
+          <div class="product-card" data-category="panels">
+            <div class="product-image eps-panel"></div>
+            <h3>EPS იზოლაციური პანელი 120x60x8</h3>
+            <p>გაძლიერებული EPS პანელი მაღალი იზოლაციისთვის</p>
+            <div class="product-price">₾45.00</div>
+            <button
+              class="add-to-cart"
+              onclick="addToCart('eps-panel-2', 'EPS იზოლაციური პანელი 120x60x8', 45.00)"
+            >
+              კალათაში დამატება
+            </button>
+          </div>
+
+          <!-- EPS Packaging -->
+          <div class="product-card" data-category="packaging">
+            <div class="product-image eps-packaging"></div>
+            <h3>EPS დამცავი შეფუთვა</h3>
+            <p>ფრაგილური ნივთების დასაცავად EPS შეფუთვა</p>
+            <div class="product-price">₾15.00</div>
+            <button
+              class="add-to-cart"
+              onclick="addToCart('eps-packaging-1', 'EPS დამცავი შეფუთვა', 15.00)"
+            >
+              კალათაში დამატება
+            </button>
+          </div>
+
+          <div class="product-card" data-category="packaging">
+            <div class="product-image eps-packaging"></div>
+            <h3>EPS ტრანსპორტირების ყუთი</h3>
+            <p>უსაფრთხო ტრანსპორტირებისთვის EPS ყუთი</p>
+            <div class="product-price">₾22.00</div>
+            <button
+              class="add-to-cart"
+              onclick="addToCart('eps-packaging-2', 'EPS ტრანსპორტირების ყუთი', 22.00)"
+            >
+              კალათაში დამატება
+            </button>
+          </div>
+
+          <!-- EPS Insulation -->
+          <div class="product-card" data-category="insulation">
+            <div class="product-image eps-panel"></div>
+            <h3>EPS სახურავის იზოლაცია</h3>
+            <p>სახურავის თერმული იზოლაციისთვის EPS მასალა</p>
+            <div class="product-price">₾40.00</div>
+            <button
+              class="add-to-cart"
+              onclick="addToCart('eps-insulation-1', 'EPS სახურავის იზოლაცია', 40.00)"
+            >
+              კალათაში დამატება
+            </button>
+          </div>
+
+          <div class="product-card" data-category="insulation">
+            <div class="product-image eps-panel"></div>
+            <h3>EPS კედლის იზოლაცია</h3>
+            <p>კედლების იზოლაციისთვის სპეციალური EPS პანელები</p>
+            <div class="product-price">₾38.00</div>
+            <button
+              class="add-to-cart"
+              onclick="addToCart('eps-insulation-2', 'EPS კედლის იზოლაცია', 38.00)"
+            >
+              კალათაში დამატება
+            </button>
+          </div>
+
+          <div class="product-card" data-category="insulation">
+            <div class="product-image eps-panel"></div>
+            <h3>EPS იატაკის იზოლაცია</h3>
+            <p>იატაკის ქვეშ განსათავსებელი EPS იზოლაციური მასალა</p>
+            <div class="product-price">₾32.00</div>
+            <button
+              class="add-to-cart"
+              onclick="addToCart('eps-insulation-3', 'EPS იატაკის იზოლაცია', 32.00)"
+            >
+              კალათაში დამატება
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Cart Sidebar -->
+    <div id="cart-sidebar" class="cart-sidebar">
+      <div class="cart-header">
+        <h3>კალათა</h3>
+        <button onclick="toggleCart()" class="close-cart">✕</button>
+      </div>
+      <div id="cart-items" class="cart-items">
+        <p>კალათა ცარიელია</p>
+      </div>
+      <div class="cart-footer">
+        <div class="cart-total">
+          <strong>სულ: ₾<span id="cart-total">0.00</span></strong>
+        </div>
+        <a href="checkout.html" class="btn btn-primary btn-full">გადახდა</a>
+      </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+      <div class="container">
+        <p>&copy; 2024 EPS ქარხანა. ყველა უფლება დაცულია.</p>
+      </div>
+    </footer>
+
+    <script src="./script.js"></script>
+  </body>
+</html>
